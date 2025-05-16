@@ -20,7 +20,7 @@ ENV FLUME_HOME /opt/flume
 ENV PATH $FLUME_HOME/bin:$PATH
 
 # Create directories for config and logs
-RUN mkdir -p /flume/conf /flume/data /flume/logs
+RUN mkdir -p /flume/conf /flume/data /flume/logs /flume/lib
 
 # Make sure we have the Kafka connector
 RUN cp $FLUME_HOME/lib/flume-ng-sdk-${FLUME_VERSION}.jar /flume/lib/ && \

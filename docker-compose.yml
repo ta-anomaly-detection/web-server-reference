@@ -16,8 +16,6 @@ services:
       - DB_NAME=${DB_NAME}
     ports:
       - "3000:3000"
-    volumes:
-      - app-data:/root/app/logs
     restart: unless-stopped
     networks:
       - app-network
@@ -43,7 +41,7 @@ services:
     depends_on:
       - web-server-reference-app
     ports:
-      - "80:80"
+      - "81:80"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - app-data:/var/log/nginx 

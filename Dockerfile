@@ -1,5 +1,5 @@
 # Start from the official Golang base image
-FROM golang:1.23-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 # Install curl for downloading dependencies
 RUN apk add --no-cache curl build-base git
